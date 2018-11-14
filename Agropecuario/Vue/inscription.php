@@ -2,7 +2,7 @@
     
     include ('commun.php');
 
-    $entete = entete("MySmartHouse / Inscription");
+    $entete = entete("Agropecuario / Registro");
     $contenu = forminscription();
     $pied = pied();
 

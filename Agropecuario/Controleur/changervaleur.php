@@ -12,7 +12,7 @@ if(isset($_POST['formvaleur'])) {
     }
     else
     {
-        echo"<script>alert('Tous les champs ne sont pas remplis');document.location.href='Vue/ajoutercapteur.php';</script>";
+        echo"<script>alert('Todos los campos no están rellenos');document.location.href='Vue/ajoutercapteur.php';</script>";
     }
     echo"?<script>document.location.href='index.php?cible=ajoutercapteur'</script>";
   }

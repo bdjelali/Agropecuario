@@ -1,9 +1,9 @@
 <?php
 
-function insertlogement ($nom, $superficie, $n_piece){
+function insertlogement ($nom, $superficie, $direccion, $ciudad, $codigo, $n_piece){
     require("connexion.php");
-    $insertlgmnt = $db->prepare("INSERT INTO logement (nom, superficie, n_piece, id_utilisateur) VALUES(?, ?, ?, ?)");
-    $insertlgmnt->execute(array($nom, $superficie, $n_piece, $_SESSION['userID']));
+    $insertlgmnt = $db->prepare("INSERT INTO logement (nom, superficie, direccion, ciudad, codigo_postal, n_piece, id_utilisateur) VALUES(?, ?, ?, ?, ?, ?, ?)");
+    $insertlgmnt->execute(array($nom, $superficie, $direccion, $ciudad, $codigo, $n_piece, $_SESSION['userID']));
     return $inserlgmnt;
 }
 

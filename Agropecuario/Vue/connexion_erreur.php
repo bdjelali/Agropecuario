@@ -1,5 +1,5 @@
 <?php
-    $entete = entete("MySmartHouse / Accueil non connecté");
+    $entete = entete("Agropecuario / Pagina principal");
     $contenu = connexion();
     $contenu .= $erreur;
     $pied = pied();

@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="http://localhost:8888/MySmartHouse%20-%20MVC/Styles/Base.css" />
 	<link rel="stylesheet" href="http://localhost:8888/MySmartHouse%20-%20MVC/Styles/structure7.css" />
         <title>
-            <?php echo('MySmartHouse'); ?>
+            <?php echo('Agropecuario'); ?>
         </title>
     </head>
     

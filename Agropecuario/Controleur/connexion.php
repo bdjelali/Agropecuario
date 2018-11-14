@@ -20,7 +20,7 @@
                 }
             }
             } else { // L'utilisateur n'a pas rempli tous les champs du formulaire
-                $erreur = "Veuillez remplir tous les champs";
+                $erreur = "Todos los campos no están rellenos";
                 include("Vue/connexion_erreur.php");
         }
     } else { // La page de connexion par défaut

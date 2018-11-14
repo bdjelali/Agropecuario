@@ -6,20 +6,20 @@ function connexion(){
     ob_start();
     ?>  
 
-        <h1 style="text-align:center">PAGE DE CONNEXION</h1><br><br>
+        <h1 style="text-align:center">PAGINA DE CONNEXION</h1><br><br>
         <div class="connexion">
         <fieldset>
             <legend><B>Connexion</B></legend> <br>
             <form method="POST" action="index.php?cible=verif">
         
                 <p>
-                    <label for="email">Adresse mail ou pseudo :
+                    <label for="email">Correo electronico o pseudo :
                     </label><br>
                     <input type="text" name="mail" placeholder="Mail " />
                 
                 
                 <br>
-                    <label for="password">Mot de passe :
+                    <label for="password">Contrasena :
                     </label><br>
                     <input type="password" name="mdp" placeholder="Mot de passe " />
                 
@@ -29,7 +29,7 @@ function connexion(){
                 </p>
                 
                 <p>
-                    <a href="http://localhost:8888/Agropecuario/Vue/inscription.php">Première connexion ?</a>
+                    <a href="http://localhost:8888/Agropecuario/Vue/inscription.php">Primera connexion ?</a>
                 </p>
                   
                 </form>
@@ -50,18 +50,20 @@ function affichagecapteur($capteurs)
 {
 	ob_start();?>
 
-<h1 style="text-align:center">GEREZ VOS LOGEMENTS</h1><br><br>
-  <p style="margin-left:20%"><a href="http://localhost:8888/Agropecuario/index.php?cible=ajoutercapteur"><img src="http://localhost:8888/Agropecuario/img/ajoutercapteur.png"> </a> &nbsp;
-        <a href="http://localhost:8888/Agropecuario/index.php?cible=ajouterpiece"> <img src="http://localhost:8888/Agropecuario/img/ajouterpiece.png"></a> &nbsp;
-        <a href="http://localhost:8888/Agropecuario/index.php?cible=ajouterlogement"> <img src="http://localhost:8888/Agropecuario/img/ajouterlogement.png"></a> &nbsp;</p>
+
+<h1 style="text-align:center">Administra tus campos </h1><br><br>
+  <p style="margin-left:20%"><a href="http://localhost:8888/Agropecuario/index.php?cible=ajoutercapteur"><img src="http://localhost:8888/Agropecuario/img/sensor.png"> </a> &nbsp;
+        <a href="http://localhost:8888/Agropecuario/index.php?cible=ajouterpiece"> <img src="http://localhost:8888/Agropecuario/img/parte.png"></a> &nbsp;
+        <a href="http://localhost:8888/Agropecuario/index.php?cible=ajouterlogement"> <img src="http://localhost:8888/Agropecuario/img/campo.png"></a> &nbsp;</p>
+
 <br> <br>
-<p style="text-align:center">(Cliquez sur votre logement pour changer les données du capteur associé)</p><br>
+<p style="text-align:center">(Haga clic en sus campos para cambiar los datos del sensor asociado)</p><br>
 	<table style="margin-left:25%">
 		<tr>
-			<th>Logement</th>
-			<th>Pièce</th>
-			<th>Type Capteur</th>
-			<th>Valeur</th>   
+			<th>Campo</th>
+			<th>Sensor</th>
+			<th>Tipo de sensor</th>
+			<th>Valor</th>   
 		</tr>
 		<?php
            foreach ($capteurs as $key => $value){?>
@@ -113,7 +115,7 @@ function forminscription(){
     ?>
         <div class="bienvenue">
                
-            <h1 style="text-align:center">PAGE D'INSCRIPTION</h1>
+            <h1 style="text-align:center">PAGINA DE REGISTRO</h1>
         </div>
          <br/>
              <fieldset>
@@ -124,125 +126,125 @@ function forminscription(){
                      <label for="pseudo">Pseudo* :</label>
                     </td>
                     <td>
-                     <input type="text" placeholder="Votre pseudo" id="pseudo" name="pseudo" value="<?php if(isset($pseudo)) { echo $pseudo; } ?>" />
+                     <input type="text" placeholder="Tu pseudo" id="pseudo" name="pseudo" value="<?php if(isset($pseudo)) { echo $pseudo; } ?>" />
                     </td>
                 </tr>
                     
                 
                 <tr>
                   <td align="left">
-                     <label for="birth">Date de naissance :</label>
+                     <label for="birth">Fecha de nacimiento :</label>
                   </td>
                   <td>
-                     <input type="date" placeholder="Votre date de naissance" id="birth" name="birth" value="<?php if(isset($birth)) { echo $birth; } ?>" />
+                     <input type="date" placeholder="Nacimiento" id="birth" name="birth" value="<?php if(isset($birth)) { echo $birth; } ?>" />
                   </td>
                 </tr>
                        
                 
                 <tr>
                   <td align="left">
-                     <label for="surname">Prénom* :</label>
+                     <label for="surname">Nombre* :</label>
                   </td>
                   <td>
-                     <input type="text" placeholder="Votre prénom" id="prénom" name="prénom" value="<?php if(isset($prénom)) { echo $prénom; } ?>" />
+                     <input type="text" placeholder="Nombre" id="prénom" name="prénom" value="<?php if(isset($prénom)) { echo $prénom; } ?>" />
                   </td>
                 </tr>
                    
                 <tr>
                   <td align="left">
-                     <label for="name">Nom* :</label>
+                     <label for="name">Apellido* :</label>
                   </td>
                   <td>
-                     <input type="text" placeholder="Votre nom" id="nom" name="nom" value="<?php if(isset($nom)) { echo $nom; } ?>" />
+                     <input type="text" placeholder="Apellido" id="nom" name="nom" value="<?php if(isset($nom)) { echo $nom; } ?>" />
                   </td>
                 </tr>
             
                 
                 <tr>
                   <td align="left">
-                     <label for="address">Adresse* :</label>
+                     <label for="address">Direccion* :</label>
                   </td>
                   <td>
-                     <input type="text" placeholder="Votre adresse" id="adresse" name="adresse" value="<?php if(isset($address)) { echo $address; } ?>" />
+                     <input type="text" placeholder="Direccion" id="adresse" name="adresse" value="<?php if(isset($address)) { echo $address; } ?>" />
                   </td>
                 </tr>
                  
                 <tr>
                   <td align="left">
-                     <label for="city">Ville* :</label>
+                     <label for="city">Ciudad* :</label>
                   </td>
                   <td>
-                     <input type="text" placeholder="Votre ville" id="ville" name="ville" value="<?php if(isset($city)) { echo $city; } ?>" />
+                     <input type="text" placeholder="Ciudad" id="ville" name="ville" value="<?php if(isset($city)) { echo $city; } ?>" />
                   </td>
                 </tr>
                         
                 
                 <tr>
                   <td align="left">
-                     <label for="zip">Code postal* :</label>
+                     <label for="zip">Numero de barrio* :</label>
                   </td>
                   <td>
-                     <input type="tel" placeholder="Votre code postal" id="code_postal" name="code_postal" value="<?php if(isset($zip)) { echo $zip; } ?>" />
+                     <input type="tel" placeholder="Codigo postal" id="code_postal" name="code_postal" value="<?php if(isset($zip)) { echo $zip; } ?>" />
                   </td>
                 </tr>
               
                 <tr>
                   <td align="left">
-                     <label for="country">Pays* :</label>
+                     <label for="country">Pais* :</label>
                   </td>
                   <td>
-                     <input type="text" placeholder="Votre pays" id="pays" name="pays" value="<?php if(isset($country)) { echo $country; } ?>" />
+                     <input type="text" placeholder="Pais" id="pays" name="pays" value="<?php if(isset($country)) { echo $country; } ?>" />
                   </td>
                 </tr>
                 
                 <tr>
                   <td align="left">
-                     <label for="phone">Téléphone* :</label>
+                     <label for="phone">Telefono* :</label>
                   </td>
                   <td>
-                     <input type="tel" placeholder="Votre n° de téléphone" id="numero_tel" name="numero_tel" value="<?php if(isset($phone)) { echo $phone; } ?>" />
+                     <input type="tel" placeholder="Telefono" id="numero_tel" name="numero_tel" value="<?php if(isset($phone)) { echo $phone; } ?>" />
                   </td>
                 </tr>
               
                <tr>
                   <td align="leftt">
-                     <label for="mail">Mail* :</label>
+                     <label for="mail">Correo electronico* :</label>
                   </td>
                   <td>
-                     <input type="email" placeholder="Votre mail" id="mail" name="mail" value="<?php if(isset($mail)) { echo $mail; } ?>" />
+                     <input type="email" placeholder="Correo" id="mail" name="mail" value="<?php if(isset($mail)) { echo $mail; } ?>" />
                   </td>
                </tr>
               
                <tr>
                   <td align="left">
-                     <label for="mail2">Confirmation du mail* :</label>
+                     <label for="mail2">Confirmacion de correo electronico* :</label>
                   </td>
                   <td>
-                     <input type="email" placeholder="Confirmez votre mail" id="mail2" name="mail2" value="<?php if(isset($mail2)) { echo $mail2; } ?>" />
+                     <input type="email" placeholder="Confirmar el correo" id="mail2" name="mail2" value="<?php if(isset($mail2)) { echo $mail2; } ?>" />
                   </td>
                </tr>
               
                <tr>
                   <td align="left">
-                     <label for="mdp">Mot de passe* :</label>
+                     <label for="mdp">Contrasena* :</label>
                   </td>
                   <td>
-                     <input type="password" placeholder="Votre mot de passe" id="mdp" name="mdp" />
+                     <input type="password" placeholder="Contraseña" id="mdp" name="mdp" />
                   </td>
                </tr>
               
                <tr>
                   <td align="left">
-                     <label for="mdp2">Confirmation du mot de passe* :</label>
+                     <label for="mdp2">Confirmacion del contrasena* :</label>
                   </td>
                   <td>
-                     <input type="password" placeholder="Confirmez votre mdp" id="mdp2" name="mdp2" />
+                     <input type="password" placeholder="Confirmar la contraseña" id="mdp2" name="mdp2" />
                   </td>
                </tr>
                 </table> 
                         <br>
                     <p align="center">
-                        <input type="checkbox" name="cgu"/>  J'ai lu et j'accepte les <a href="http://localhost:8888/Agropecuario/Vue/conditions.php">conditions générales d'utilisation</a>
+                        <input type="checkbox" name="cgu"/>  He leído y acepto <a href="http://localhost:8888/Agropecuario/Vue/conditions.php">los condiciones generales de uso</a>
                         </p>    
                            
                         
@@ -250,12 +252,12 @@ function forminscription(){
                       <br>
                        <a href="http://localhost:8888/Agropecuario/index.php">
                    <input type="button" value="Retour">
-                     <input type="submit" name="forminscription" value="Je m'inscris"/>
+                     <input type="submit" name="forminscription" value="Me inscribo"/>
                     </a>
                       </p>
                         
                 <p style="text-align:left"><i>
-                        *Champs obligatoires</i></p>
+                        *Campos obligatorios</i></p>
                     
             </form>
            </fieldset>
@@ -272,16 +274,16 @@ function entete(){
     ?>
 
         <div class="topnav">
-            <p><img src= "http://localhost:8888/Agropecuario/img/logo.png" class="logoentreprise" alt="Logo entreprise"/></p>
-            <a href="http://localhost:8888/Agropecuario/index.php?cible=accueil">Accueil</a>
-            <a href="http://localhost:8888/Agropecuario/Vue/qui_sommes_nous.php">Qui sommes-nous ?</a>
+            <p><img src= "http://localhost:8888/Agropecuario/img/logoa.png" class="logoentreprise" alt="Logo entreprise"/></p>
+            <a href="http://localhost:8888/Agropecuario/index.php?cible=accueil">Inicio</a>
+            <a href="http://localhost:8888/Agropecuario/Vue/qui_sommes_nous.php">Quienes somos ?</a>
             <a href="http://localhost:8888/Agropecuario/Vue/contact.php">Contact</a>
-            <a href="http://localhost:8888/Agropecuario/Vue/FAQ.php">FAQ</a>
+            <a href="http://localhost:8888/Agropecuario/Vue/FAQ.php">Preguntas</a>
             <?php
             if (isset ($_SESSION["userID"]))
             {
-                echo '<a href="index.php?cible=verifedition">Editer son profil</a>';
-                echo '<a href="index.php?cible=deconnexion">Déconnexion</a>';
+                echo '<a href="index.php?cible=verifedition">Editar su perfil</a>';
+                echo '<a href="index.php?cible=deconnexion">Deconnexion</a>';
             }
             ?>
         </div>
@@ -297,7 +299,7 @@ function pied(){
     ob_start();
     ?>  
 
-<p style="color:black">Agropecuario - <a href="http://localhost:8888/Agropecuario/Vue/conditions.php" style="color:black"><I>Conditions d'utilisation</I></a></p>
+<p style="color:black">Agropecuario - <a href="http://localhost:8888/Agropecuario/Vue/conditions.php" style="color:black"><I>condiciones generales de uso</I></a></p>
         
 
     <?php
@@ -308,22 +310,22 @@ function pied(){
 function quisommesnous(){
     ob_start();
     ?>
-            <h1 style="text-align: center">PRESENTATION DE L'ENTREPRISE</h1> <br>
+            <h1 style="text-align: center">PRESENTACION DE LA EMPRESA</h1> <br>
 
             
-            <h2 style="color: #2874A6"><img src="http://localhost:8888/Agropecuario/img/historique.jpg" class="historique" alt="Livre" align="top" height="40" width="40"/><I>Historique</I></h2> 
+            <h2 style="color: #2874A6"><img src="http://localhost:8888/Agropecuario/img/historique.jpg" class="historique" alt="Livre" align="top" height="40" width="40"/><I>Historia</I></h2> 
             
-            <p style="font-size: 17">Agropecuario est une entreprise grandissante qui a été créée en 2017. Issue d'une équipe d'étudiants pluriculturels de l'ISEP, elle a su trouvé au travers de son premier client DOMISEP un défit à la hauteur des attentes de l'equipe qui en est à la tête.
+            <p style="font-size: 17">Agropecuario es une empresa Creciendo, que se creó en 2018. Desde un equipo de estudiantes multiculturales del Universidad de Belgrano.
             </p> 
             <br> 
 
-            <h2 style="color:#2874A6"><img src="http://localhost:8888/Agropecuario/img/Objectif.jpg" class="objectif" alt="objectif" align="top" height="40" width="40"/><I>Objectif</I></h2>
+            <h2 style="color:#2874A6"><img src="http://localhost:8888/Agropecuario/img/Objectif.jpg" class="objectif" alt="objectif" align="top" height="40" width="40"/><I>Objectivos</I></h2>
             
-            <p style="font-size: 17">Fermez les yeux, et imaginez un monde où votre maison répond à vos besoins. Luminosité, température, humidité, sécurité... Tout est sous votre contrôle et ce en un seul un clic ! Agropecuario est un outil qui vous permettra d’être connecté à votre domicile depuis n’importe où et à n’importe quel moment. Grâce à notre base de données et à notre plateforme Web Agropecuario.fr, le client pourra avoir accès au contrôle de sa maison à distance.
+            <p style="font-size: 17">Su objetivo es ayudar al agricultor y automatizar los puntos repetitivos, mientras se monitorea la calidad del suelo para las plantas que produce. Estábamos planeando comenzar en Argentina, siendo un país bien orientado hacia la agricultura.
             </p>
             <br> 
 
-            <h2 style="color:#2874A6"><img src="http://localhost:8888/Agropecuario/img/equipe.jpg" class="equipe" alt="bonhomme" align="top" height="40" width="40"/>  <I>Derrière Agropecuario ?</I></h2>
+            <h2 style="color:#2874A6"><img src="http://localhost:8888/Agropecuario/img/equipe.jpg" class="equipe" alt="bonhomme" align="top" height="40" width="40"/>  <I>Equipo</I></h2>
             
            <br>
         
@@ -338,13 +340,13 @@ function contact(){
     ?>
             <div class="contacteznous">
         
-            <h1 style="text-align:center">CONTACTEZ-NOUS</h1><br><br>
+            <h1 style="text-align:center">CONTACTENOS</h1><br><br>
             </div>
 
                 <fieldset>
                     <br>
                 <div class="logocontact">
-                <p><a href="mailto:Agropecuario.contact@gmail.com" class="logoemail" target="_blank"><img src="http://localhost:8888/Agropecuario/img/email.jpg" alt="Email"><p>Envoyez un mail</p></a>
+                <p><a href="mailto:Agropecuario.contact@gmail.com" class="logoemail" target="_blank"><img src="http://localhost:8888/Agropecuario/img/email.jpg" alt="Email"><p>Enviar un mail</p></a>
                 <p>
                 </div>   
                 <div class="logocontact">
@@ -353,15 +355,14 @@ function contact(){
                 </div>
                 <div class="logocontact">
                 <p><a href="https://www.facebook.com/My-Smart-House-1021275438007096/?fref=ts" class="logofacebook" target="_blank"><img src="http://localhost:8888/Agropecuario/img/facebook.png" alt="Facebook" ><p>
-                <p>Likez notre page</p></a>
+                <p>Like nuestra pagina</p></a>
                </div>
                </fieldset>
                <br>
                <br>
                <br>
-               <h1 style="text-align:center;">TROUVEZ-NOUS FACILEMENT</h1><br>
-               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d656.6883495279876!2d2.280302766448461!3d48.82476644102272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe0d3eb2ad501cb27!2sISEP!5e0!3m2!1sfr!2sfr!4v1494930808024" width="900" height="600" frameborder="1"></iframe>
-            <br><br><br>
+               <h1 style="text-align:center;">Donde estamos</h1><br>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9572.270443609903!2d-58.438576904989866!3d-34.56787053104029!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5c8936d7be3%3A0x864ef69ee3e2d3f!2sUniversit%C3%A9+de+Belgrano!5e0!3m2!1sfr!2sar!4v1542213505956" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>            <br><br><br>
             <?php
             $contact = ob_get_clean();
             return $contact;
@@ -377,17 +378,17 @@ function FAQ(){
         </div>
             
         <fieldset>
-            <legend><B>Foire aux questions</B></legend>
+            <legend><B>Preguntas</B></legend>
 
        <dl>
-            <dt><B>Question 1 : Comment modifier l'identifiant et le mot de passe de mon compte ?</B></dt>
-           <dd><I>Une fois connecté, il vous suffit de vous rendre dans l'espace "éditer profil". </I> </dd>
-            <dt><B>Question 2 : Comment installer mes capteurs?</B></dt>
-           <dd><I>Une fois connecté, il vous suffit de vous rendre sur votre profil et de cliquer sur la section "ajouter capteur".</I></dd>
-            <dt><B>Question 3 : Comment trouver les numéros de série de mes capteurs?</B></dt>
-           <dd><I>Ils se trouvent sur l'emballage ou bien directement sur l'étiquette situé au dos des capteurs.</I></dd>
-           <dt><B>Question 4 : Combien de temps les modifications prennent-elles à être éxécutées ?</B></dt>
-           <dd><I>L'apport de modification s'effectue quasi-instantanément, il faut néanmoins prendre en compte le temps d'activation de certains actionneurs.</I></dd>
+            <dt><B>Pregunta 1 : Cómo cambiar el nombre de usuario y la contraseña de mi cuenta ?</B></dt>
+           <dd><I>Una vez conectado, simplemente vaya al área "editar perfil". </I> </dd>
+            <dt><B>Pregunta 2 : ¿Cómo instalar mis sensores?</B></dt>
+           <dd><I>Una vez que haya iniciado sesión, simplemente vaya a su perfil y haga clic en la sección "agregar sensor".</I></dd>
+            <dt><B>Pregunta 3 : ¿Cómo encontrar los números de serie de mis sensores?</B></dt>
+           <dd><I>Están en el empaque o directamente en la etiqueta en la parte posterior de los sensores.</I></dd>
+           <dt><B>Pregunta 4 : ¿Cuánto tardan en ejecutarse los cambios?</B></dt>
+           <dd><I></I></dd>
         </dl>
 
 
@@ -419,38 +420,39 @@ function conditions() {
     ob_start();
     ?> 
 
-<div><h1 align="center">MENTIONS LEGALES</h1><br>
+<div><h1 align="center">Notas legales</h1><br>
 
-<p>Merci de lire avec attention les différentes modalités d’utilisation du présent site avant d’y parcourir ses pages. En vous connectant sur ce site, vous acceptez sans réserves les présentes modalités. Aussi, conformément à l’article n°6 de la Loi n°2004-575 du 21 Juin 2004 pour la confiance dans l’économie numérique, les responsables du présent site internet www.homeg4.com sont :
-Editeur du Site :</p>
+<p>Gracias por leer detenidamente las diversas formas de usar este sitio antes de navegar por sus páginas. Al conectarse a este sitio, acepta sin reservas estos términos y condiciones. Asimismo, de acuerdo con el artículo n ° 6 de la Ley n ° 2004-575 del 21 de junio de 2004 para la confianza en la economía digital, los responsables del sitio web www.homeg4.com son:
+Editor del Sitio</p>
 
-<p>Agropecuario Numéro de SIRET : 12345678901234 Responsable editorial : Agropecuario 10 rue des Vanves <br>Téléphone :01 49 54 52 00 - Fax : 01 49 54 02 01 Email : Agropecuario.contact@gmail.com Site Web : www.Agropecuario.com 
-Hébergement :</p>
-
-
-<p>Agropecuario Adresse : 10 rue Vanves 92130 Issy-les-Moulineaux Site Web : www.Agropecuario.com 
-Conditions d’utilisation :</p>
-
-<p>Ce site est proposé en différents langages web (HTML, HTML5, Javascript, CSS, etc…) pour un meilleur confort d'utilisation et un graphisme plus agréable, nous vous recommandons de recourir à des navigateurs modernes comme Internet explorer, Safari, Firefox, Google Chrome, etc… Les mentions légales ont été générées sur le site Générateur de mentions légales, offert par Welye. Agropecuario met en œuvre tous les moyens dont elle dispose, pour assurer une information fiable et une mise à jour fiable de ses sites internet. Toutefois, des erreurs ou omissions peuvent survenir. L'internaute devra donc s'assurer de l'exactitude des informations auprès de , et signaler toutes modifications du site qu'il jugerait utile. n'est en aucun cas responsable de l'utilisation faite de ces informations, et de tout préjudice direct ou indirect pouvant en découler. Cookies : Le site www.Agropecuario.com peut-être amené à vous demander l’acceptation des cookies pour des besoins de statistiques et d'affichage. Un cookies est une information déposée sur votre disque dur par le serveur du site que vous visitez. Il contient plusieurs données qui sont stockées sur votre ordinateur dans un simple fichier texte auquel un serveur accède pour lire et enregistrer des informations . Certaines parties de ce site ne peuvent être fonctionnelles sans l’acceptation de cookies. Liens hypertextes : Les sites internet de peuvent offrir des liens vers d’autres sites internet ou d’autres ressources disponibles sur Internet. Agropecuario ne dispose d'aucun moyen pour contrôler les sites en connexion avec ses sites internet. ne répond pas de la disponibilité de tels sites et sources externes, ni ne la garantit. Elle ne peut être tenue pour responsable de tout dommage, de quelque nature que ce soit, résultant du contenu de ces sites ou sources externes, et notamment des informations, produits ou services qu’ils proposent, ou de tout usage qui peut être fait de ces éléments. Les risques liés à cette utilisation incombent pleinement à l'internaute, qui doit se conformer à leurs conditions d'utilisation. Les utilisateurs, les abonnés et les visiteurs des sites internet de ne peuvent mettre en place un hyperlien en direction de ce site sans l'autorisation expresse et préalable de Agropecuario. Dans l'hypothèse où un utilisateur ou visiteur souhaiterait mettre en place un hyperlien en direction d’un des sites internet de Agropecuario, il lui appartiendra d'adresser un email accessible sur le site afin de formuler sa demande de mise en place d'un hyperlien. Agropecuario se réserve le droit d’accepter ou de refuser un hyperlien sans avoir à en justifier sa décision. 
-Services fournis :</p>
-
-<p>L'ensemble des activités de la société ainsi que ses informations sont présentés sur notre site www.Agropecuario.com.</p>
-
-<p>Agropecuario s’efforce de fournir sur le site www.Agropecuario.com des informations aussi précises que possible. les renseignements figurant sur le site www.Agropecuario.com ne sont pas exhaustifs et les photos non contractuelles. Ils sont donnés sous réserve de modifications ayant été apportées depuis leur mise en ligne. Par ailleurs, tous les informations indiquées sur le site www.Agropecuario.com sont données à titre indicatif, et sont susceptibles de changer ou d’évoluer sans préavis.</p>
+<p>Agropecuario Número SIRET: 12345678901234 Director editorial: Agropecuario 10 rue des Vanves <br> Teléfono: +33 (0) 1 49 54 52 00 - Fax: +33 (0) 1 49 54 02 01 Correo electrónico: Agropecuario.contact@gmail.com Sitio web: www.Agropecuario.com
+Alojamiento:</p>
 
 
-<p>Limitation contractuelles sur les données :</p>
+<p>Agropecuario Dirección: Federico Lacroze 1955. Buenos Aires Sitio web: www.Agropecuario.com
+Condiciones de uso :</p>
 
-<p>Les informations contenues sur ce site sont aussi précises que possible et le site remis à jour à différentes périodes de l’année, mais peut toutefois contenir des inexactitudes ou des omissions. Si vous constatez une lacune, erreur ou ce qui parait être un dysfonctionnement, merci de bien vouloir le signaler par email, à l’adresse contact@homega.com, en décrivant le problème de la manière la plus précise possible (page posant problème, type d’ordinateur et de navigateur utilisé, …). Tout contenu téléchargé se fait aux risques et périls de l'utilisateur et sous sa seule responsabilité. En conséquence, ne saurait être tenu responsable d'un quelconque dommage subi par l'ordinateur de l'utilisateur ou d'une quelconque perte de données consécutives au téléchargement. De plus, l’utilisateur du site s’engage à accéder au site en utilisant un matériel récent, ne contenant pas de virus et avec un navigateur de dernière génération mis-à-jour Les liens hypertextes mis en place dans le cadre du présent site internet en direction d'autres ressources présentes sur le réseau Internet ne sauraient engager la responsabilité de Agropecuario. 
-Propriété intellectuelle :</p>
+<p>Este sitio se propone en diferentes idiomas web (HTML, HTML5, Javascript, CSS, etc.) para una mayor comodidad de uso y gráficos más agradables. Recomendamos utilizar navegadores modernos como Internet Explorer, Safari, Firefox, Google Chrome, etc ... Los avisos legales se generaron en el Sitio del Generador de menciones legales, ofrecido por Welye. Agropecuario implementa todos los medios a su disposición para garantizar información confiable y una actualización confiable de sus sitios web. Sin embargo, pueden ocurrir errores u omisiones. Por lo tanto, el usuario debe garantizar la exactitud de la información e informar sobre cualquier cambio en el sitio que considere útil. no es en modo alguno responsable por el uso que se haga de esta información, y cualquier daño directo o indirecto que pueda resultar. Cookies: El sitio web www.Agropecuario.com puede haberle pedido que acepte cookies con fines estadísticos y de visualización. Una cookie es información almacenada en su disco duro por el servidor del sitio que está visitando. Contiene varios datos que se almacenan en su computadora en un simple archivo de texto al que un servidor accede para leer y guardar información. Es posible que algunas partes de este sitio no funcionen sin la aceptación de cookies. Es posible que algunas partes de este sitio no funcionen sin la aceptación de cookies. Enlaces de hipertexto: Los sitios web de pueden ofrecer enlaces a otros sitios web u otros recursos disponibles en Internet. Agropecuario no tiene forma de controlar los sitios en relación con sus sitios web. no responde ni garantiza la disponibilidad de dichos sitios y fuentes externos. No puede ser responsable por ningún daño, de cualquier naturaleza, que resulte del contenido de estos sitios o fuentes externas, incluida la información, los productos o servicios que ofrecen, o cualquier uso que pueda hacerse. estos elementos Los riesgos asociados con este uso son responsabilidad total del usuario, que debe cumplir con sus condiciones de uso. Los usuarios, suscriptores y visitantes de sitios web no pueden configurar un hipervínculo a este sitio sin el consentimiento previo expreso de Agropecuario. En el caso de que un usuario o visitante desee configurar un hipervínculo a uno de los sitios web de Agropecuario, será su responsabilidad enviar un correo electrónico accesible en el sitio para formular su solicitud para configurar un hipervínculo. Agropecuario se reserva el derecho de aceptar o rechazar un hipervínculo sin tener que justificar su decisión.
+Servicios prestados:</p>
 
-<p>Tout le contenu du présent sur le site www.Agropecuario.com, incluant, de façon non limitative, les graphismes, images, textes, vidéos, animations, sons, logos, gifs et icônes ainsi que leur mise en forme sont la propriété exclusive de la société à l'exception des marques, logos ou contenus appartenant à d'autres sociétés partenaires ou auteurs. Toute reproduction, distribution, modification, adaptation, retransmission ou publication, même partielle, de ces différents éléments est strictement interdite sans l'accord exprès par écrit de Agropecuario. Cette représentation ou reproduction, par quelque procédé que ce soit, constitue une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle. Le non-respect de cette interdiction constitue une contrefaçon pouvant engager la responsabilité civile et pénale du contrefacteur. En outre, les propriétaires des Contenus copiés pourraient intenter une action en justice à votre encontre. 
-Déclaration à la CNIL :</p>
+<p> Todas las actividades e información de la compañía están disponibles en nuestro sitio web www.Agropecuario.com. </ p>
 
-<p>Conformément à la loi 78-17 du 6 janvier 1978 (modifiée par la loi 2004-801 du 6 août 2004 relative à la protection des personnes physiques à l'égard des traitements de données à caractère personnel) relative à l'informatique, aux fichiers et aux libertés, ce site a fait l'objet d'une déclaration 0000000000 auprès de la Commission nationale de l'informatique et des libertés (www.cnil.fr). 
-Litiges :</p>
+<p> Agropecuario se esfuerza por proporcionar el sitio web www.Agropecuario.com con la información más precisa posible. La información en el sitio web www.Agropecuario.com no es exhaustiva y las fotos no son contractuales. Están sujetos a modificaciones ya que se hicieron desde que se conectaron. Además, toda la información indicada en el sitio www.Agropecuario.com se proporciona como una indicación, y es probable que cambie o evolucione sin previo aviso. </ P>
 
-<p>Les présentes conditions du site www.homeg4.com sont régies par les lois françaises et toute contestation ou litiges qui pourraient naître de l'interprétation ou de l'exécution de celles-ci seront de la compétence exclusive des tribunaux dont dépend le siège social de la société. La langue de référence, pour le règlement de contentieux éventuels, est le français. </p></div>
+
+<p> Limitaciones del contrato sobre los datos: </ p>
+
+
+<p>LLa información contenida en este sitio es lo más precisa posible y el sitio se actualizó en diferentes épocas del año, pero puede contener imprecisiones u omisiones. Si observa una brecha, un error o lo que parece ser un mal funcionamiento, le agradecemos que lo informe por correo electrónico a contact@homega.com, describiendo el problema con la mayor precisión posible (página problemática, tipo de computadora y navegador utilizado, ...). Cualquier contenido descargado es bajo el propio riesgo del usuario y bajo su exclusiva responsabilidad. En consecuencia, no se puede responsabilizar por ningún daño a la computadora del usuario o cualquier pérdida de datos luego de la descarga. Además, el usuario del sitio acepta acceder al sitio utilizando equipos recientes, que no contengan virus y con un navegador de última generación actualizado. Los enlaces de hipertexto configurados como parte de este sitio Internet a otros recursos en Internet no compromete la responsabilidad de Agropecuario.
+Propiedad intelectual :</p>
+
+<p>Todos los contenidos del presente en el sitio www.Agropecuario.com, incluidos, de forma no limitativa, los gráficos, imágenes, textos, videos, animaciones, sonidos, logotipos, gifs e íconos, así como su formato, son propiedad exclusiva de la empresa, excepto las marcas, los logotipos o el contenido de otras empresas asociadas o autores. Cualquier reproducción, distribución, modificación, adaptación, retransmisión o publicación, incluso parcial, de estos elementos está estrictamente prohibida sin el consentimiento expreso por escrito de Agropecuario. Esta representación o reproducción, por cualquier proceso, constituye una infracción punible por los artículos L.335-2 y siguientes del Código de propiedad intelectual. El incumplimiento de esta prohibición constituye una infracción que puede incurrir en la responsabilidad civil y penal del infractor. Además, los propietarios de Contenido copiado pueden demandarlo.
+Declaración a la CNIL:</p>
+
+<p>De conformidad con la Ley 78-17 de 6 de enero de 1978 (modificada por la Ley 2004-801 de 6 de agosto de 2004 sobre la protección de las personas con respecto al procesamiento de datos personales) relativa a las computadoras, los archivos. y las libertades, este sitio fue objeto de una declaración 0000000000 cerca de la Comisión Nacional de informática y libertades (www.cnil.fr).
+Litigios:</p>
+
+<p>Las presentes condiciones del sitio www.homeg4.com se rigen por las leyes francesas y cualquier disputa o litigio que pueda surgir de la interpretación o la ejecución de las mismas será competencia exclusiva de los tribunales de los que depende el domicilio social de la sociedad. El idioma de referencia para la solución de posibles conflictos es el francés. </p></div>
     
 
 
@@ -465,7 +467,7 @@ function editer_profil($user){
     ob_start();
     ?>
     
-        <h1 style="text-align: center">EDITER SON PROFIL</h1> <br> <br>
+        <h1 style="text-align: center">EDITAR SU PERFIL</h1> <br> <br>
             <fieldset>
             <form method="POST" action="http://localhost:8888/Agropecuario/index.php?cible=verifedition" enctype="multipart/form-data">  
              
@@ -473,7 +475,7 @@ function editer_profil($user){
             <br>
             <tr>
                <td align="left">
-               <label>Nouveau pseudo :</label>
+               <label>Nuevo pseudo :</label>
                </td>
                <td>
                <input type="text" name="newpseudo" placeholder="Pseudo" value="<?php echo $user['pseudo']; ?>" />
@@ -482,7 +484,7 @@ function editer_profil($user){
 
             <tr>
                <td align="left">
-               <label>Nouveau mail :</label>
+               <label>Nuevo correo electronico :</label>
                </td>
                <td>
                <input type="text" name="newmail" placeholder="Mail" value ="<?php echo $user['mail']; ?>" />
@@ -490,7 +492,7 @@ function editer_profil($user){
 
             <tr>
                <td align="left">
-               <label>Nouveau mot de passe :</label>
+               <label>Nueva contraseña :</label>
                </td>
                <td>
                <input type="password" name="newmdp1" placeholder="Mot de passe">
@@ -499,7 +501,7 @@ function editer_profil($user){
 
             <tr>
                <td align="left">
-               <label>Confirmation - nouveau mot de passe :</label>
+               <label>Confirmacion - nueva contraseña :</label>
                </td>
 
                <td>
@@ -510,14 +512,14 @@ function editer_profil($user){
                </table>
                <br>
                <p style="text-align: center">
-                <input type="submit" value="Mettre à jour mon profil !"> 
+                <input type="submit" value="Actualizar mi perfil !"> 
                </p>
             </form>
             <?php if(isset($msg)) { echo $msg; } ?>
                 <form>
                     <p style="text-align:center">
                     <a href="http://localhost:8888/Agropecuario/index.php?">
-                   <input type="button" value="Retour">
+                   <input type="button" value="Regreso">
                     </a>
                     </p>    
                 </form>
@@ -533,29 +535,29 @@ function valeurcapteur($capteur)
 	
 	ob_start();
 	?>
-        <h1 style="text-align:center" >MODIFIER LA VALEUR D'UN CAPTEUR</h1>
+        <h1 style="text-align:center" >CAMBIAR EL VALOR DE UN SENSOR</h1>
          <br /><br />               
 		 <fieldset>
          <form method="POST" action="http://localhost:8888/Agropecuario/index.php?cible=changervaleur">
 			<table>
                <tr>
-                  <td align="right">Nom du logement :</td>
+                  <td align="right">Nombre del campo :</td>
                   <td align="left"><?=$capteur[0]["nomlogement"]?></td>
                 </tr>
 
 				<tr>
-                  <td align="right">Nom de la pièce :</td>
+                  <td align="right">Nombre de la parte :</td>
                   <td align="left"><?=$capteur[0]["nompiece"]?></td>
                 </tr>
 
                 <tr>
-                  <td align="right">Type de capteur :</td>
+                  <td align="right">Tipo de sensor :</td>
 				  <td align="left"><?=$capteur[0]["typecapteur"]?></td>
                 </tr>
             
 
                 <tr> 
-                  <td align="right">Valeur du capteur :
+                  <td align="right">Valor del sensor :
                   <td align="left">
                      <input type="text" placeholder="values" id="valeur" name="valeur" value="<?=$capteur[0]["valeur"]?>">
                   </td>
@@ -565,10 +567,10 @@ function valeurcapteur($capteur)
                   <p align="center">
                      <br />
                       <a href="http://localhost:8888/Agropecuario/index.php?">
-                        <input type="button" value="Retour" /></a>
-                        <input type="submit" name="formvaleur" value="Valider" />
+                        <input type="button" value="Regreso" /></a>
+                        <input type="submit" name="formvaleur" value="Validar" />
              </p>
-             <p align="center">Pour les lumières : 0=OFF 1=ON</p>
+             <p align="center">Por la agua : 0=OFF 1=ON</p>
 				<input type="hidden" value="<?=$capteur[0]["id"]?>" name="id" id="id"/>
             </form>
             </fieldset>
@@ -581,7 +583,7 @@ function ajoutercapteur($pieces){
     ob_start();
     if (count($pieces)>0) {
     ?>
-            <h1 style="text-align:center">AJOUTER DES CAPTEURS</h1>
+            <h1 style="text-align:center">AGREGAR SENSORS</h1>
          <br /><br />
          <div class="capteur">
 		 <fieldset>
@@ -589,13 +591,13 @@ function ajoutercapteur($pieces){
                 <table>
                <tr>
                   <td align="right">
-                     <label for="n_piece">Nom de la pièce :</label>
+                     <label for="n_piece">Nombre de la parte :</label>
                   </td>
                   <td>
                      <SELECT name="piece" size="1">
                         <?php
                         foreach ($pieces as $key => $value){
-                            ?><OPTION value='<?=$value[0]?>'>Logement : <?=$value[1]?> => Piece : <?=$value[2]?> </OPTION><?php
+                            ?><OPTION value='<?=$value[0]?>'>Campo : <?=$value[1]?> => Parte : <?=$value[2]?> </OPTION><?php
                         }
                         ?>
                       </SELECT>
@@ -604,20 +606,20 @@ function ajoutercapteur($pieces){
 
                 <tr>
                   <td align="right">
-                     <label for="type">Type de capteur :</label>
+                     <label for="type">Tipo de sensor :</label>
                   </td>
 				  <td>
 				  <SELECT name="type" size="1">
-					<option selected>Lumière</option>
-					<option>Température</option>
-					<option>Humidité</option>
+					<option selected>Agua</option>
+					<option>Temperatura</option>
+					<option>Humedad</option>
 				  </SELECT>
                   </td>
                 </tr>
 
                 <tr> 
                   <td align="right">
-					<label for="n_piece">Numéro de série :</label>
+					<label for="n_piece">Numero de serie :</label>
                   </td>
                   <td>
                      <input type="text" placeholder="N° de série" id="nserie" name="nserie" >
@@ -629,8 +631,8 @@ function ajoutercapteur($pieces){
                 
                        <p style="text-align:center">
                     <a href="http://localhost:8888/Agropecuario/index.php?">
-                   <input type="button" value="Retour"></a>
-                    <input type="submit" name="formcapteur" value="Valider" />    
+                   <input type="button" value="Regreso"></a>
+                    <input type="submit" name="formcapteur" value="Validar" />    
                     </p> 
             </form>
             </fieldset>
@@ -639,7 +641,7 @@ function ajoutercapteur($pieces){
     <?php
     }
     else
-        echo"<script>alert('Il faut créer des pièces avant de leur affecter des capteurs !');document.location.href='index.php?cible=ajouterpiece'</script>";
+        echo"<script>alert('Tienes que crear partes antes de asignar sensores !');document.location.href='index.php?cible=ajouterpiece'</script>";
         
     $ajoutercapteur = ob_get_clean();
     return $ajoutercapteur;
@@ -648,7 +650,7 @@ function ajoutercapteur($pieces){
 function ajouterlogement(){
     ob_start();
     ?>
-    <h1 style="text-align: center">EDITION DU LOGEMENT</h1>
+    <h1 style="text-align: center">EDITAR EL CAMPO</h1>
 
          <br /><br />
          <form method="POST" action="http://localhost:8888/Agropecuario/index.php?cible=ajouterlogement">
@@ -658,28 +660,51 @@ function ajouterlogement(){
                 <table>
                <tr>
                   <td align="left">
-                     <label for="nom">Nom du logement :</label>
+                     <label for="nom">Nombre del campo :</label>
                   </td>
                   <td>
-                     <input type="text" placeholder="Nom du logement" id="nom" name="nom" value="" />
+                     <input type="text" placeholder="Nombre del campo" id="nom" name="nom" value="" />
                   </td>
                 </tr>
 
                 <tr>
                   <td align="left">
-                     <label for="superficie">Superficie :</label>
+                     <label for="superficie">Area :</label>
                   </td>
                   <td>
-                     <input type="phone" placeholder="Superficie en m2" id="superficie" name="superficie" value="" />
+                     <input type="phone" placeholder="Area en m2" id="superficie" name="superficie" value="" />
                   </td>
                 </tr>
 
-                <tr>
+                    <tr>
                   <td align="left">
-                     <label for="n_piece">Nombre de pièces :</label>
+                     <label for="direcion">Direccion :</label>
                   </td>
                   <td>
-                     <input type="phone" placeholder="Nombre de pièces" id="n_piece" name="n_piece" value="" />
+                     <input type="phone" placeholder="Direccion" id="direccion" name="direccion" value="" />
+                  </td>
+                </tr>
+                    <tr>
+                  <td align="left">
+                     <label for="ciudad">Ciudad :</label>
+                  </td>
+                  <td>
+                     <input type="phone" placeholder="Buenos Aires" id="ciudad" name="ciudad" value="" />
+                  </td>
+                </tr> <tr>
+                  <td align="left">
+                     <label for="codigo_postal">Codigo postal :</label>
+                  </td>
+                  <td>
+                     <input type="phone" placeholder="Codigo Postal" id="codigo_postal" name="codigo_postal" value="" />
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">
+                     <label for="n_piece">Numero de partes :</label>
+                  </td>
+                  <td>
+                     <input type="phone" placeholder="Nombre de partes" id="n_piece" name="n_piece" value="" />
                   </td>
                 </tr>
 
@@ -689,9 +714,9 @@ function ajouterlogement(){
                   <br>
                   <p style="text-align:center">
                     <a href="http://localhost:8888/Agropecuario/index.php?">
-                   <input type="button" value="Retour">
+                   <input type="button" value="Regreso">
                     </a>
-                        <input type="submit" name="formlogement" value="Valider" >
+                        <input type="submit" name="formlogement" value="Validar" >
                   <p>
             </fieldset>
                  </div>
@@ -707,7 +732,7 @@ function ajouterpiece($Logements){
     ob_start();
     if (count($Logements)>0) {
     ?>
-        <h1 style="text-align: center">EDITION DE LA PIECE</h1>
+        <h1 style="text-align: center">EDITAR LA PARTE</h1>
         
          <br /><br />
          <form method="POST" action="http://localhost:8888/Agropecuario/index.php?cible=ajouterpiece">
@@ -717,7 +742,7 @@ function ajouterpiece($Logements){
                     
                 <tr>
                   <td align="right">
-                     <label for="n_logement">Nom du logement :</label>
+                     <label for="n_logement">Nombre del campo :</label>
                   </td>
                   <td>
                       <SELECT name="logement" size="1">
@@ -732,28 +757,28 @@ function ajouterpiece($Logements){
     
                <tr>
                   <td align="right">
-                     <label for="n_piece">Nom de la pièce :</label>
+                     <label for="n_piece">Nombre de la parte :</label>
                   </td>
                   <td>
-                     <input type="text" placeholder="Nom de la pièce" id="nom" name="nom" value="" />
+                     <input type="text" placeholder="Nombre de la parte" id="nom" name="nom" value="" />
                   </td>
                 </tr>
 
                 <tr>
                   <td align="right">
-                     <label for="superficie">Superficie :</label>
+                     <label for="superficie">Area :</label>
                   </td>
                   <td>
-                     <input type="phone" placeholder="Superficie en m2" id="superficie" name="superficie" value="" />
+                     <input type="phone" placeholder="Area en m2" id="superficie" name="superficie" value="" />
                   </td>
                 </tr>
                 <tr>
                  </table>
                        <p style="text-align:center">
                     <a href="http://localhost:8888/Agropecuario/index.php?">
-                   <input type="button" value="Retour">
+                   <input type="button" value="Regreso">
                     </a>
-                        <input type="submit" name="formpiece" value="Valider" />
+                        <input type="submit" name="formpiece" value="Validar" />
                  </p>
             </fieldset>
                  </div>
@@ -765,7 +790,7 @@ function ajouterpiece($Logements){
     <?php
     }
     else
-        echo"<script>alert('Il faut créer des logements avant de leur affecter des pièces !!!');document.location.href='index.php?cible=ajouterlogement'</script>";
+        echo"<script>alert('Tienes que crear campos antes de asignarles partes!');document.location.href='index.php?cible=ajouterlogement'</script>";
         
     $ajouterpiece = ob_get_clean();
     return $ajouterpiece;

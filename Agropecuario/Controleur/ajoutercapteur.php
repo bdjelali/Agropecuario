@@ -15,15 +15,15 @@ if(isset($_POST['formcapteur'])) {
 		$type = $_POST['type'];
 		switch($type)
 		{
-		 case 'Lumière':
+		 case 'Agua':
 		  $valeur =1;
 		  break;
 
-		 case 'Température':
+		 case 'Temperatura':
 		  $valeur = 20;
 		  break;
 
-		 case 'Humidité':
+		 case 'Humidad':
 		  $valeur = 15;
 		  break;
 
@@ -33,11 +33,11 @@ if(isset($_POST['formcapteur'])) {
 		}
 
         insertcapteur($_POST['piece'],$_POST['type'],$_POST['nserie'], $valeur);
-        echo"<script>alert('Votre capteur a été ajouté avec succès');document.location.href='index.php';</script>";
+        echo"<script>alert('Su sensor ha sido añadido con éxito');document.location.href='index.php';</script>";
     }
     else
     {
-        echo"<script>alert('Tous les champs ne sont pas remplis');document.location.href='Vue/ajoutercapteur.php';</script>";
+        echo"<script>alert('Todos los campos no están rellenos');document.location.href='Vue/ajoutercapteur.php';</script>";
     }
     echo"?<script>document.location.href='index.php?cible=ajoutercapteur'</script>";
   }

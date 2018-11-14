@@ -7,24 +7,25 @@ if(isset($_SESSION['userID'])) {
     
 if(isset($_POST['formpiece'])) {
     $nom = htmlspecialchars($_POST['nom']);
-    $superficie = htmlspecialchars($_POST['superficie']); 
+    $superficie = htmlspecialchars($_POST['superficie']);
+    $direccion = htmlspecialchars($_POST['direccion']);
+    $ciudad = htmlspecialchars($_POST['ciudad']);
     $logement = $_POST['logement']; 
     if(!empty($_POST['nom']) AND !empty($_POST['superficie'])) {
       $nomlength = strlen($nom);
       if($nomlength <= 255) {
             insertpiece($nom,$superficie,$logement);
-            echo"<script>alert('Votre piece a bien été créé');document.location.href='index.php';</script>";
-
+            echo"<script>alert('Tu parte ha sido creada');document.location.href='index.php';</script>";
 
       }
        else
         {
-            echo"<script>alert('Le nom de votre pièce ne doit pas dépasser 255 caractères !');document.location.href='Vue/ajouterpiece.php';</script>";
+            echo"<script>alert('Su nombre de parte no debe exceder los 255 caracteres!');document.location.href='Vue/ajouterpiece.php';</script>";
         }
    }
         else
         {
-            echo"<script>alert('Tous les champs doivent être completés !');document.location.href='Vue/ajouterpiece.php';</script>";
+            echo"<script>alert('Todos los campos no están rellenos!');document.location.href='Vue/ajouterpiece.php';</script>";
         }
 }
 }

@@ -34,3 +34,6 @@ hr{
 .selection {
     color: gold;
 }
+
+.btn-grad {background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD 51%, #4CB8C4 100%)}
+.btn-grad:hover { background-position: right center; }

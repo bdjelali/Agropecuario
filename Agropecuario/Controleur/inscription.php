@@ -75,7 +75,7 @@ if(isset($_POST['forminscription']))
    }
     else
     {
-      echo"<script>alert('Tous les champs doivent être remplis');document.location.href='Vue/inscription.php'</script>";
+      echo"<script>alert('Todos los campos no están rellenos');document.location.href='Vue/inscription.php'</script>";
         
           }
 }
